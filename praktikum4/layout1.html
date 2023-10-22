@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout 1</title>
+</head>
+<style>
+header {
+    background-color: teal;
+    color: white;
+    padding: 4px;
+    text-align: center;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+nav {
+    background-color:olive;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#article {
+    /*Sorry bang gua bingung klo gak ada ini
+    si footernya ngikut ke atas bang :)*/
+    margin: 20px;
+    background-color: white;
+    height: 400px;
+    width: 100%;
+}
+
+section {
+    background-color: whitesmoke;
+    margin-bottom: 20px;
+    padding: 5px;
+    float: left;
+    width: 70%;
+}
+
+aside {
+    background-color: wheat;
+    padding: 20px;
+    text-align: center;
+    float: right; 
+    margin-left: 10px;
+    width: 20%; 
+    height: 400px;
+}
+
+footer{
+    text-align: center; 
+    padding: 10px;
+
+}
+
+</style>
+<body>
+    <header>
+        <div id="logo">
+            <img src="img/duck.png" alt="Logo Web" width="100">
+        </div>
+        <h1>TOKO APA AJA</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Artikel</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+    
+    <article>
+        <aside>
+            <h2>Konten Multimedia</h2>
+            <img src="img/duck.png" alt="Gambar 1" width="100">
+            <img src="img/duck.png" alt="Gambar 2" width="100">
+        </aside>
+
+        <section id="s1">
+            <h2>Section 1</h2>
+            <p>Konten Section 1</p>
+        </section>
+        
+        <section>
+            <h2>Section 2</h2>
+            <p>Konten Section 2</p>
+        </section>
+
+        <section>
+            <h2>Section 3</h2>
+            <p>Konten Section 3</p>
+        </section>
+    </article>
+    
+    <div id="article">
+
+    </div>
+    
+    <footer>
+        <p>&copy; Tugas PWeb1 : Septian Si (0110223149)
+            <br>TI05</p>
+    </footer>
+
+</body>
+
+</html>

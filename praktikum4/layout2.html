@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2</title>
+</head>
+<style>
+header {
+    background-color: burlywood;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#pp {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+nav {
+    background-color:darkgoldenrod;
+    color: white;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+article {
+    margin: 20px;
+}
+
+section {
+    background-color:cornsilk;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+
+</style>
+<body>
+    <header>
+        <div id="pp">
+            <img src="img/pp.jpg" alt="Foto Diri Anda">
+        </div>
+        <h1>Profil Anda</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Biodata</a></li>
+            <li><a href="#">Deskripsi Diri</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="CVSeptian.pdf">Unduh CV</a></li>
+            <li><a href="ppraktikumCV.html">Praktikum CV</a></li>
+        </ul>
+    </nav>
+    
+    <article>
+        <section id="biodata">
+            <h2>Biodata</h2>
+            <p>Nama: Septian Si</p>
+            <p>Tanggal Lahir: 29 Agustus 2003</p>
+            <p>Alamat: Cibinong, Bogor</p>
+            <p>Email: septianlee033@gmail.com</p>
+        </section>
+        
+        <section id="deskripsi">
+            <h2>Deskripsi Diri</h2>
+            <p>Saya adalah seorang mahasiswa yang berpengalaman dalam bidang Networking. 
+                Saya sangat bersemangat untuk belajar dan berkembang dalam karier saya. 
+                Dengan latar belakang yang kuat dalam berbagai proyek dan keahlian teknis, 
+                saya siap untuk menghadapi tantangan baru.</p>
+            <p>Selain itu, saya juga memiliki minat dalam fotografi dan video editing. 
+                Saya sering membantu teman dalam pembuatan konten multimedia yang dibagikan di platform online. 
+                Saya percaya bahwa kreativitas adalah kunci untuk sukses dalam dunia yang terus berubah.</p>
+        </section>
+        
+        <section id="media">
+            <h3>Link Random Video</h3>
+            <iframe 
+                src="https://www.youtube.com/embed/C3GouGa0noM?si=isSyEixzB3Qq8Xef" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+            
+            <h3>Koleksi Foto</h3>
+            <img src="img/pp2.jpg" alt="Foto 1" width="100">
+            <img src="img/pp3.jpg" alt="Foto 2" width="100">
+            <img src="img/pp.jpg" alt="Foto 3" width="107">
+        </section>
+    </article>
+    <footer style="text-align: center; padding: 10px;">
+        <p>&copy; Tugas PWeb1 : Septian Si (0110223149)
+            <br>TI05</p>
+    </footer>
+
+</body>
+</html>
+    
