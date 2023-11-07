@@ -1,0 +1,53 @@
+body{
+    background-color:darkcyan;
+}
+header{
+    background-color: burlywood;
+    margin-bottom: 1em;
+    height: 8.5em;
+    border: 0.6px;
+    border-radius: 15px;
+    text-align: center;
+}
+.main{
+
+    margin-bottom: 1em;
+    height: 150px;
+}
+.b1{
+    background-color: yellowgreen;
+    width: 22%;
+    height:150px;
+    float: left;
+    margin-right: 2%;
+    border: 0.6px;
+    border-radius: 15px;
+    text-align: center;
+}
+.b2{
+    background-color: orange;
+    width: 75%;
+    height:150px;
+    float: right;
+    border: 0.6px;
+    border-radius: 15px;
+    text-align: center;
+}
+.b3{
+    background-color: darkgoldenrod;
+    width: 22%;
+    height:150px;
+    float: left;
+    border: 0.6px;
+    border-radius: 15px;
+    text-align: center;
+}
+.b4{
+    background-color: darkorchid;
+    width: 75%;
+    height:150px;
+    float: right;
+    border: 0.6px;
+    border-radius: 15px;
+    text-align: center;
+}

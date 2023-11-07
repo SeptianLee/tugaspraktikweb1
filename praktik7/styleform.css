@@ -1,0 +1,32 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+label{
+    font-weight: bold;
+    
+}
+.form-group{
+    margin-bottom: 0.8em;
+
+}
+h2{
+    text-align: center;
+}
+input{
+    float: right;
+}
+.form{
+    background-color: blanchedalmond;
+    border: 0.6px solid brown;
+    border-radius: 15px;
+    box-shadow: 0 0 10px brown;
+    padding: 3em;
+    width: 380px;
+    margin: 100px auto;
+}
+input{
+    float: right;
+}
+textarea{
+    float: right;
+}
