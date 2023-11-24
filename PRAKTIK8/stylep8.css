@@ -1,0 +1,39 @@
+*{
+    margin: 5px;
+    border-radius: 20px;
+}
+body{
+    background-color: palevioletred;
+}
+.img{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top : 150px;
+}
+img{
+    width: 150px;
+}
+.content{
+    display: flex;
+}
+header, article, aside, footer{
+    padding: 1em;
+    text-align: center;
+    margin: 10px;
+}
+header{
+    background-color: aquamarine;
+}
+aside{
+    background-color: wheat;
+    width: 25%;
+    height: 300px;
+}
+article{
+    background-color: blueviolet;
+    width: 75%;
+    height: 300px;
+}
+footer{
+    background-color: aquamarine;
+}
