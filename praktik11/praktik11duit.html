@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function kalkulator(){
+            let input = document.getElementById("inputan").value;
+            let muang = document.getElementById("duit").value;
+
+            console.log(input * muang);
+
+            let hasilhasil = document.getElementById("hasil2");
+            hasilhasil.innerHTML = input * muang;
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend><h1>Hitung Kurs Rupiah</h1></legend>
+        <table style="border: solid black; border-radius: 20px; padding: 50px;">
+        <tr>
+            <td>Masukan Nilai</td>
+            <td>Mata Uang</td>
+            <td>Nilai Rupiah</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="inputan" onchange="kalkulator()"></td>
+            <td>
+            <select name="" id="duit" onchange="kalkulator()">
+                <option value="">Mata Uang</option>
+                <option value="14650">Dollar (US)</option>
+                <option value="11647">Dollar (SGD)</option>
+            </select>
+            </td>
+            <td>
+                <p id="hasil2"></p>
+            </td>
+        </tr>
+    </table>
+    </fieldset>
+</body>
+</html>

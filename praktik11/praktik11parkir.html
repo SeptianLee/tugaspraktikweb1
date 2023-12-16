@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>praktik11</title>
+    <script>
+        function hitungbya(){
+            const per2jam = 3000;
+            const perjam = 1000;
+
+            let _masuk = document.getElementById("masuk").value;
+            let _keluar = document.getElementById("keluar").value;
+            let selisih = _keluar - _masuk;
+            let biaya = 0;
+
+            if(selisih <= 2){
+                biaya = per2jam;
+            } 
+            else{
+                let jamtambah = selisih - 2;
+                biaya = per2jam + (jamtambah * perjam);
+            }
+
+            let hasil = document.getElementById("hsl");
+            hasil.innerHTML = biaya
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <fieldset>
+    <legend><h1>Hitung Biaya Parkir</h1></legend>
+    jam masuk :
+    <input type="number" id="masuk" value="">
+    <br>
+    jam keluar :
+    <input type="number" id="keluar" value="">
+    <br>
+    <br>
+    <button onclick="hitungbya()">Hitung Biaya Parkir</button>
+    <hr>
+    <h2>Biaya Parkir : <span id="hsl"></span></h2>
+</fieldset>
+</body>
+</html>
