@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function image_picker(){
+            const list_img = ["asian.jpeg","american.jpeg","negro.jpeg"];
+            let pilihan = document.getElementById("op").value;
+
+            if(pilihan == "a"){
+                let select = list_img[0];
+                document.getElementById("gmbr").src = `img/${select}`;
+            }
+            if(pilihan == "b"){
+                let select = list_img[2];
+                document.getElementById("gmbr").src = `img/${select}`;
+            }
+            if(pilihan == "c"){
+                let select = list_img[1];
+                document.getElementById("gmbr").src = `img/${select}`;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Picker</h1>
+    <select name="" id="op" onchange="image_picker()">
+        <option value="">Pilih Ras</option>
+        <option value="a">Asian</option>
+        <option value="b">Black</option>
+        <option value="c">American</option>
+    </select>
+    <div class="container">
+        <img id="gmbr" style="width: 500px;">
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="styles.css">
+<script>
+    function validateForm() {
+        var name = document.forms["myForm"]["name"].value;
+        var email = document.forms["myForm"]["email"].value;
+        var departureTime = document.forms["myForm"]["departureTime"].value;
+        var destination = document.forms["myForm"]["destination"].value;
+        var ticketCount = document.forms["myForm"]["ticketCount"].value;
+
+        var namePattern = /^[a-zA-Z ]{2,30}$/;
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        var timePattern = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
+        var ticketCountPattern = /^[1-9]|10$/;
+
+        if (name == "" || !namePattern.test(name)) {
+            alert("Nama Pelanggan tidak valid");
+            return false;
+        }
+        if (email == "" || !emailPattern.test(email)) {
+            alert("Email tidak valid");
+            return false;
+        }
+        if (departureTime == "" || !timePattern.test(departureTime)) {
+            alert("Jam Keberangkatan tidak valid");
+            return false;
+        }
+        if (destination == "") {
+            alert("Tujuan Keberangkatan tidak valid");
+            return false;
+        }
+        if (ticketCount == "" || !ticketCountPattern.test(ticketCount)) {
+            alert("Jumlah Tiket tidak valid");
+            return false;
+        }
+
+        alert("Nama Pelanggan: " + name + "\nEmail: " + email + "\nJam Keberangkatan: " + departureTime + "\nTujuan Keberangkatan: " + destination + "\nJumlah Tiket: " + ticketCount);
+        return false;
+    }
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/submit_form" onsubmit="return validateForm()" method="post">
+    <label for="nama">Nama Pelanggan:</label><br>
+    <input type="text" name="name">
+    <br>
+    <label for="email">Email:</label><br>
+    <input type="text" name="email">
+    <br>
+    <label for="jam">Jam Keberangkatan:</label><br>
+    <input type="text" name="departureTime">
+    <br>
+    <label for="tujuan">Tujuan Keberangkatan:</label><br>
+    <input type="text" name="destination">
+    <br>
+    <label for="jumlah">Jumlah Tiket:</label><br>
+    <input type="text" name="ticketCount">
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

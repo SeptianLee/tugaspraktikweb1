@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Form Validation</h2>
+  
+  <form id="validationForm">
+    <label for="nama">Nama Pelanggan:</label><br>
+    <input type="text" id="nama" name="nama"><br>
+    
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+    
+    <label for="jam">Jam Keberangkatan:</label><br>
+    <input type="text" id="jam" name="jam"><br>
+    
+    <label for="tujuan">Tujuan Keberangkatan:</label><br>
+    <input type="text" id="tujuan" name="tujuan"><br>
+    
+    <label for="jumlah">Jumlah Tiket:</label><br>
+    <input type="text" id="jumlah" name="jumlah"><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+  
+  <div id="errorMessages" class="error"></div>
+  <div id="displayData" class="success"></div>
+
+  <script>
+  
+document.getElementById('validationForm').addEventListener('submit', function(event) {
+event.preventDefault(); // Prevent form submission
+    
+    var nama = document.getElementById('nama').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var jam = document.getElementById('jam').value.trim();
+    var tujuan = document.getElementById('tujuan').value.trim();
+    var jumlah = document.getElementById('jumlah').value.trim();
+  
+    var errorMessages = [];
+    
+    // Validasi nama pelanggan
+    if (nama === '') {
+      errorMessages.push('Nama Pelanggan harus diisi.');
+      document.getElementById('nama').classList.add('error');
+    } else if (nama.length > 30) {
+      errorMessages.push('Nama Pelanggan maksimal 30 karakter.');
+      document.getElementById('nama').classList.add('error');
+    } else {
+      document.getElementById('nama').classList.remove('error');
+    }
+  
+    // Validasi email
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      errorMessages.push('Email harus diisi dengan format yang benar.');
+      document.getElementById('email').classList.add('error');
+    } else {
+      document.getElementById('email').classList.remove('error');
+    }
+  
+    // Validasi jam keberangkatan
+    var jamPattern = /^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/;
+    if (!jamPattern.test(jam)) {
+      errorMessages.push('Jam Keberangkatan harus diisi dengan format jam antara 00.00 - 23.59.');
+      document.getElementById('jam').classList.add('error');
+    } else {
+      document.getElementById('jam').classList.remove('error');
+    }
+  
+    // Validasi tujuan keberangkatan
+    if (tujuan === '') {
+      errorMessages.push('Tujuan Keberangkatan harus diisi.');
+      document.getElementById('tujuan').classList.add('error');
+    } else {
+      document.getElementById('tujuan').classList.remove('error');
+    }
+  
+    // Validasi jumlah tiket
+    var jumlahInt = parseInt(jumlah);
+    if (isNaN(jumlahInt) || jumlahInt < 1 || jumlahInt > 10) {
+      errorMessages.push('Jumlah Tiket harus diisi dengan bilangan bulat antara 1 - 10.');
+      document.getElementById('jumlah').classList.add('error');
+    } else {
+      document.getElementById('jumlah').classList.remove('error');
+    }
+  
+    // Tampilkan pesan error jika ada
+    var errorDisplay = document.getElementById('errorMessages');
+    if (errorMessages.length > 0) {
+      errorDisplay.innerHTML = '<p>Error:</p><ul><li>' + errorMessages.join('</li><li>') + '</li></ul>';
+      document.getElementById('displayData').innerHTML = ''; // Hapus data jika ada error
+    } else {
+      errorDisplay.innerHTML = '';
+  
+      // Tampilkan data jika valid
+      var displayData = document.getElementById('displayData');
+      displayData.innerHTML = '<h3>Data Form:</h3><p>Nama Pelanggan: ' + nama + '</p><p>Email: ' + email + '</p><p>Jam Keberangkatan: ' + jam + '</p><p>Tujuan Keberangkatan: ' + tujuan + '</p><p>Jumlah Tiket: ' + jumlah + '</p>';
+    }
+  });
+  </script>
+</body>
+</html>
